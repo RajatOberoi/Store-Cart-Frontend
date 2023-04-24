@@ -1,0 +1,43 @@
+@import "../../css-config/mixins.scss";
+
+.cart-panel {
+    @include md{
+        padding-top: 60px;
+        min-height: 53vh;
+    }
+    .cart-content{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 20px;
+        gap: 20px;
+        .cart-header{
+            .heading{
+                font-size: xx-large;
+            }
+        }
+    }
+    .empty-cart{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        .empty-cart-image{
+            height: 100px;
+            width: 100px;
+        }
+        .text{
+            font-size: large;
+        }
+        .return-home{
+            background: black;
+            color: white;
+            border-radius: 10px;
+            width: 100%;
+            font-size: large;
+            padding: 5px 5px;
+            border: black;
+            text-align: center;
+        }
+    }
+}

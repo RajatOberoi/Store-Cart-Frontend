@@ -1,0 +1,172 @@
+@import "../../css-config/mixins.scss";
+
+.navbar{
+    width: 100%;
+    z-index: 99;
+    height: 58px;
+    @include md{
+        height: 60px;
+        position: fixed;
+        top: 0;
+        transition: top 0.6s;
+        background: white;
+    }
+
+    .wrapper{
+        padding: 10px 15px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 100%;    
+        // margin: 0 auto;
+        @include md{
+            height: 100%;
+        }
+        .item{
+            display: flex;
+            align-items: center;
+            text-transform: capitalize;
+            justify-content: center;
+            @include md{
+                display: contents;
+            }
+        }
+        .left{
+            display: none;
+            align-items: center;
+            gap: 20px;
+            @include md{
+                display: flex;
+                .left-content{
+                    display: flex;
+                    gap: 25px;
+                    font-weight: 700;
+                }
+            }
+        }
+        .left-mobile{
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 100;
+            display: flex;
+            justify-content: flex-end;
+            .left-content {
+                width: 100%;
+                height: 100%;
+                background: white;
+                position: relative;
+                z-index: 1;
+                display: flex;
+                flex-direction: column;
+                transform: translateX(100%);
+                justify-content: center;
+                gap: 20px;
+                animation: slideCartWindow 0.3s ease forwards;
+                @include md {
+                    width: 400px;
+                }
+                .close-icon{
+                    position: absolute;
+                    top: 30px;
+                    right: 30px;
+                }
+            }
+        }
+        .center{
+            font-size: 24px;
+            cursor: pointer;
+            padding-bottom: 7px;
+            font-weight: lighter;
+            @include md{
+                font-size: 34px;
+                position: absolute;
+                left: 50%;
+                transform: translateX(-40%);
+            }
+        }
+        .right{
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            @include md{
+                gap: 25px;
+            }
+
+            .icons{
+                display: flex;
+                gap: 20px;
+                color: grey;
+                cursor: pointer;
+                padding-right: 0.5em;
+                @include md{
+                    font-size: 24px;
+                }
+
+                .wishlist{
+                    display: none;
+                    @include md{
+                        display: block;
+                        span{
+                            &.quant{
+                                color: red;
+                            }
+                            &.no-items{
+                                color: gray;
+                            }
+                        }
+                    }
+                }
+
+                .cart-icon{
+                    position: relative;
+                    span{
+                        position: relative;
+                        &.quantity{
+                            position: absolute;
+                            right: -17px;
+                            top: -9px;
+                            background: red;
+                            border-radius: 50%;
+                            width: 20px;
+                            text-align: center;
+                            color: white;
+                        }
+                        &.no-item{
+                            position: absolute;
+                            right: -10px;
+                            top: -9px;
+                            color: grey;
+                            @include md{
+                                right: -17px;
+                            }
+                        }
+                    }
+                }
+
+                .mobile-menu{
+                    @include md{
+                        display: none;
+                    }
+                }
+            }
+        }
+    
+    }
+    &.hide{
+        top: -70px;
+    }
+}
+
+@keyframes slideCartWindow {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+  }
+
+  

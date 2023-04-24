@@ -1,0 +1,39 @@
+@import "../../css-config/mixins.scss";
+
+.FeaturedProducts{
+    // margin: 100px 200px;
+    padding: 20px;
+
+    .top{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 50px;
+        gap: 20px;
+
+        h1{
+            line-height: 1;
+            text-align: center;
+        }
+
+        p{
+            color: gray;
+            text-align: center;
+        }
+    }
+
+    .bottom{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 50px;
+
+
+        @include md{
+            flex-direction: row;
+            flex-wrap: wrap;    
+        }
+    }
+}

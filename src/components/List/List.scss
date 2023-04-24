@@ -1,0 +1,36 @@
+@import "../../css-config/mixins.scss";
+
+.list{
+    .products-card{
+        @include md{
+            justify-content: space-evenly;
+            display: flex;
+            row-gap: 20px;
+            flex-wrap: wrap;
+        }
+    }
+    .page-end{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+        margin-top: 20px;
+        .page-index{
+            background: black;
+            color: white;
+            border-radius: 10px;
+            font-size: large;
+            padding: 5px 5px;
+            border: black;
+            cursor: pointer;
+            &:disabled{
+                background: gray;
+                color: aliceblue;
+            }
+        }
+        .page-number{
+            font-size: larger;
+            font-weight: bold;
+        }
+    }
+}

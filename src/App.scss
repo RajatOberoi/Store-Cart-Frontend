@@ -1,0 +1,8 @@
+@import"./css-config/mixins.scss";
+
+.app{
+    .link{
+        color: inherit;
+        text-decoration: none;
+    }
+}

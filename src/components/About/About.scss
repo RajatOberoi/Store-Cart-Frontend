@@ -1,0 +1,47 @@
+@import "../../css-config/mixins.scss";
+
+.about-container {
+  padding: 40px;
+  background-color: #F5F5F5;
+  transition: background-color 0.3s ease;
+
+  h2 {
+    margin-bottom: 15px;
+    font-size: 24px;
+    font-weight: 700;
+    color: #333333;
+  }
+
+  p {
+    margin-bottom: 10px;
+    font-size: 16px;
+    line-height: 1.4;
+    color: #666666;
+  }
+
+  &:hover {
+    background-color: #E0E0E0;
+  }
+
+  @include md {
+    margin: 65px 20px 10px 20px;
+
+    h2 {
+      margin-bottom: 20px;
+      font-size: 32px;
+      font-weight: 700;
+      color: #222222;
+    }
+
+    p {
+      margin-bottom: 10px;
+      font-size: 18px;
+      line-height: 1.6;
+      color: #555555;
+    }
+
+    &:hover {
+      background-color: #CCCCCC;
+    }
+  }
+}
