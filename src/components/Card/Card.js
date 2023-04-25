@@ -8,7 +8,7 @@ export default function Card({item,value}) {
             <Link to={`/product/${item.id}`} className="link">
                 <div className="card">
                     <div className="image">
-                        <img src={process.env.REACT_APP_API_URL+item.attributes.img.data.attributes.url} alt=""/>
+                        <img src={item.attributes.img.data.attributes.url} alt=""/>
                     </div>
                     <h2>{item.attributes.title}</h2>
                     <div className="prices">
@@ -24,7 +24,7 @@ export default function Card({item,value}) {
             <Link to={`/product/${item.id}`} className="link">
                 <div className="card">
                     <div className="image">
-                        <img src={process.env.REACT_APP_API_URL+item.attributes.img.data.attributes.url} alt=""/>
+                        <img src={item.attributes.img.data.attributes.url} alt=""/>
                     </div>
                     <h2>{item.attributes.title}</h2>
                     <div className="prices">
