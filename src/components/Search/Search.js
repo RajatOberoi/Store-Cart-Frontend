@@ -47,7 +47,7 @@ export default function Search({setShowSearch}) {
                             }}
                         >
                             <div className="image-container">
-                                <img src={process.env.REACT_APP_API_URL+item.attributes.img.data.attributes.url} alt=""/>
+                                <img src={item.attributes.img.data.attributes.url} alt=""/>
                             </div>
                             <div className="prod-details">
                                 <span className="name">

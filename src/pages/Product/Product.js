@@ -19,11 +19,11 @@ export default function Product() {
         { loading?"Loading":(<>   
         <div className="left">
             <div className="images">
-            <img src={process.env.REACT_APP_API_URL+data?.attributes?.img?.data?.attributes?.url} alt="product"/>
+            <img src={data?.attributes?.img?.data?.attributes?.url} alt="product"/>
             </div>
         </div>
         <div className="mainImg">
-            <img src={process.env.REACT_APP_API_URL+data?.attributes?.img?.data?.attributes?.url} alt="product-main"/>
+            <img src={data?.attributes?.img?.data?.attributes?.url} alt="product-main"/>
         </div>
         <div className="right">
             <h1>{data?.attributes?.title}</h1>
@@ -42,7 +42,7 @@ export default function Product() {
                 title: data.attributes.title,
                 desc: data.attributes.desc,
                 price: data.attributes.price,
-                img: process.env.REACT_APP_API_URL+data.attributes.img.data.attributes.url,
+                img: data.attributes.img.data.attributes.url,
                 quantity    
             }))}>
                         <AddShoppingCartIcon/> <p>ADD TO CART</p>
@@ -53,7 +53,7 @@ export default function Product() {
                         title: data.attributes.title,
                         desc: data.attributes.desc,
                         price: data.attributes.price,
-                        img: process.env.REACT_APP_API_URL+data.attributes.img.data.attributes.url,    
+                        img: data.attributes.img.data.attributes.url,    
                     }))}>
                     <FavoriteBorderIcon/> <p>ADD TO WISHLIST</p>
             </button>
