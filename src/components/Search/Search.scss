@@ -36,15 +36,19 @@
           display: flex;
           align-items: center;
           justify-content: flex-end;
-          padding: 20px 15px;
-          border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-          width: 100%;
+          margin: 20px 15px;
+          @include md{
+            width: 80%;
+            gap: 10px;
+          }
           .search-heading {
               flex-grow: 1;
               margin-bottom: 0;
               font-size: 20px;
               font-weight: 700;
               text-transform: uppercase;
+              text-align: center;
+              border: 2px solid rgba(0,0,0,.1);
             }
           .close-btn {
               display: flex;
